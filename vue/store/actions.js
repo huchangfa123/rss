@@ -198,7 +198,7 @@ export const authenticate = ({ commit, state }) => {
         })
     } else if (!tools.validatePassword(state.global.auth.password)) {
         commit(types.ERROR, {
-            message: '密码不符合要求 /\\w{6,18}/ '
+            message: '密码不符合要求 /\\w{6,18}/'
         })
     } else {
         commit(types.INFO, {

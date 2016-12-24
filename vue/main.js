@@ -16,6 +16,8 @@ Vue.config.debug = true
 
 Vue.use(infiniteScroll)
 
+window.vue = Vue
+
 Vue.http.interceptors.push(function (request, next) {
     if (cookie.parse(document.cookie)['XSRF-TOKEN']) {
         request.headers.set('X-XSRF-TOKEN', cookie.parse(document.cookie)['XSRF-TOKEN'])
@@ -26,6 +28,7 @@ Vue.http.interceptors.push(function (request, next) {
                 store.commit('ERROR', {
                     message: response.data.message
                 })
+
             } else {
                 // 通常为 500 错误
                 store.commit('ERROR', {

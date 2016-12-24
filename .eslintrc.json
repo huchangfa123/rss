@@ -8,12 +8,8 @@
     "parser": "babel-eslint",
     "extends": "eslint:recommended",
     "plugins": [
-        "html",
         "babel"
     ],
-    "settings": {
-        "html/report-bad-indent": 2
-    },
     "parserOptions": {
         "sourceType": "module"
     },
@@ -28,10 +24,10 @@
             "error",
             4
         ],
-        // unix 换行风格 auto
+        // windows 换行风格 auto
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         // 强制单引号 auto
         "quotes": [
@@ -121,13 +117,6 @@
                 "int32Hint": false
             }
         ],
-        "babel/generator-star-spacing": 1,
-        "babel/new-cap": 1,
-        "babel/array-bracket-spacing": 1,
-        "babel/object-shorthand": 1,
-        "babel/no-await-in-loop": 1,
-        "babel/flow-object-type": 1,
-        "babel/func-params-comma-dangle": 1,
         "no-console": "off"
     }
 }

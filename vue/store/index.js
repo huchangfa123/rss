@@ -33,7 +33,7 @@ const msg = store => {
     })
 }
 
-export default new Vuex.Store({
+export default window.vuex = new Vuex.Store({
     actions,
     getters,
     modules: {
@@ -45,5 +45,5 @@ export default new Vuex.Store({
         global
     },
     strict:  debug,
-    plugins: debug ? [createLogger(), msg] : [msg]
+    plugins: [msg]
 })
